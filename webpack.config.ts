@@ -6,4 +6,8 @@ export default (environment: Record<string, unknown>, argv: BuildArguments) => c
 	appDirectory,
 	port: 3001,
 	exposes: { './Navigation': './src/Navigation' },
+	standalone: {
+		entry: './src/dev.ts',
+		title: 'Workforce Navigation',
+	},
 }, environment, argv);
