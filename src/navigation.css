@@ -1,0 +1,23 @@
+.sidebar-content { height: 100%; display: flex; flex-direction: column; padding: 23px 14px 18px; }
+.brand { display: flex; align-items: center; gap: 10px; padding: 0 10px 24px; font-weight: 750; font-size: 16px; letter-spacing: -.02em; }
+.brand-mark { width: 31px; height: 31px; display: grid; place-items: center; color: #fff; background: var(--brand); border-radius: 9px; box-shadow: 0 7px 16px rgba(var(--brand-rgb), .25); }
+.nav-label { padding: 0 11px; margin: 8px 0 7px; color: var(--muted-soft); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.app-nav { display: flex; flex-direction: column; gap: 4px; }
+.app-nav-link { display: flex; align-items: center; gap: 11px; min-height: 42px; padding: 0 11px; color: var(--muted); border-radius: 10px; font-size: 13px; font-weight: 600; transition: .15s ease; }
+.app-nav-link:hover { color: var(--text); background: var(--canvas); }
+.app-nav-link.active { color: var(--brand); background: var(--brand-soft); }
+.app-nav-link svg { flex: 0 0 auto; }
+.sidebar-footer { margin-top: auto; }
+.coverage-card { margin: 14px 4px; padding: 13px; border: 1px solid var(--border); border-radius: 12px; background: var(--canvas); }
+.coverage-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 9px; color: var(--muted); font-size: 11px; font-weight: 650; }
+.coverage-top strong { color: var(--text); font-size: 12px; }
+.mini-progress { height: 5px; overflow: hidden; background: var(--border); border-radius: 999px; }
+.mini-progress > span { display: block; height: 100%; background: var(--success); border-radius: inherit; }
+.nav-help { display: flex; align-items: center; gap: 9px; padding: 10px 11px; color: var(--muted); font-size: 12px; }
+
+@media (max-width: 760px) {
+	.sidebar-content { padding: 7px 8px; }
+	.brand, .nav-label, .sidebar-footer { display: none; }
+	.app-nav { height: 100%; flex-direction: row; justify-content: space-around; }
+	.app-nav-link { min-width: 58px; height: 50px; flex-direction: column; justify-content: center; gap: 3px; padding: 0 5px; font-size: 8px; }
+}
